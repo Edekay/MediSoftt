@@ -1,0 +1,498 @@
+/* ===================================================
+   MediSoft - Estilos Globales Mejorados
+   =================================================== */
+
+:root {
+    --bg-dark: #0b0f19;
+    --bg-card: #111625;
+    --border-card: #1e293b;
+    --text-muted: #94a3b8;
+
+    --purple-primary: #8b5cf6;
+    --purple-hover: #7c3aed;
+    --indigo-primary: #4f46e5;
+    --indigo-hover: #4338ca;
+}
+
+body.bg-medisoft {
+    background-color: var(--bg-dark);
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Utilitarios de Maquetación */
+.border-slate-800 {
+    border-color: #1e293b !important;
+}
+
+.max-w-7xl {
+    max-width: 80rem;
+}
+
+.max-w-4xl {
+    max-width: 56rem;
+}
+
+/* --- Navbar --- */
+.bg-nav-medisoft {
+    background-color: rgba(11, 15, 25, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.brand-icon-box {
+    padding: 0.6rem;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    border-radius: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Hero Section (Estructura y Fondo) --- */
+.hero-section {
+    background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(11, 15, 25, 0.92), rgba(11, 15, 25, 0.88), #0b0f19);
+}
+
+.neon-glow {
+    position: absolute;
+    border-radius: 9999px;
+    pointer-events: none;
+    filter: blur(120px);
+}
+
+.neon-purple {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background-color: rgba(139, 92, 246, 0.2);
+}
+
+.neon-indigo {
+    top: 30%;
+    left: 30%;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(79, 70, 229, 0.15);
+}
+
+.badge-medisoft-pill {
+    background-color: rgba(67, 24, 110, 0.6);
+    color: #c084fc;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.hero-title {
+    font-size: 2.75rem;
+    line-height: 1.15;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+.text-purple-gradient {
+    background: linear-gradient(to right, #c084fc, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    max-width: 40rem;
+    color: #cbd5e1;
+}
+
+/* --- Botones --- */
+.btn-purple-glow {
+    background-color: #8b5cf6;
+    color: #ffffff !important;
+    border: none !important;
+    transition: all 0.25s ease;
+}
+
+.btn-purple-glow:hover {
+    background-color: #7c3aed;
+    box-shadow: 0 0 22px rgba(139, 92, 246, 0.55);
+}
+
+.btn-indigo-glow {
+    background-color: #4f46e5;
+    color: #ffffff !important;
+    border: none !important;
+    transition: all 0.25s ease;
+}
+
+.btn-indigo-glow:hover {
+    background-color: #4338ca;
+    box-shadow: 0 0 22px rgba(79, 70, 229, 0.55);
+}
+
+.btn-violet-glow {
+    background-color: #8b5cf6;
+    color: #ffffff !important;
+    border: none !important;
+    transition: all 0.25s ease;
+}
+
+.btn-violet-glow:hover {
+    background-color: #7c3aed;
+    box-shadow: 0 0 22px rgba(139, 92, 246, 0.55);
+}
+
+.btn-hero-gradient {
+    background: linear-gradient(to right, #8b5cf6, #4f46e5);
+    border: none !important;
+    transition: all 0.25s ease;
+}
+
+.btn-hero-gradient:hover {
+    opacity: 0.95;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+}
+
+/* ===================================================
+   Tarjetas Interactivas (Efecto Movimiento y Resplandor)
+   =================================================== */
+
+.card-medisoft {
+    background-color: #111625 !important;
+    border: 1px solid #1e293b !important;
+    box-shadow: none;
+    padding: 2.25rem !important;
+    min-height: 320px;
+    cursor: pointer;
+    /* Animación fluida de desplazamiento y resplandor */
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Animación de elevación al tocar / colocar mouse */
+.card-medisoft:hover,
+.card-medisoft:active {
+    transform: translateY(-8px);
+}
+
+/* Iconos base dentro de tarjetas */
+.icon-box {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.icon-purple,
+.icon-indigo,
+.icon-violet,
+.icon-emerald {
+    background-color: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    color: #a78bfa;
+}
+
+/* Estado Activo / Hover Tarjetas 1 y 3 (Púrpura) */
+.card-purple-hover:hover,
+.card-violet-hover:hover,
+.card-purple-hover:active,
+.card-violet-hover:active {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 12px 28px -4px rgba(139, 92, 246, 0.35);
+}
+
+.card-purple-hover:hover .icon-purple,
+.card-violet-hover:hover .icon-violet,
+.card-purple-hover:active .icon-purple,
+.card-violet-hover:active .icon-violet {
+    background-color: #8b5cf6 !important;
+    border-color: #a78bfa !important;
+    color: #ffffff !important;
+}
+
+/* Estado Activo / Hover Tarjeta 2 (Índigo) */
+.card-indigo-hover:hover,
+.card-indigo-hover:active {
+    border-color: #4f46e5 !important;
+    box-shadow: 0 12px 28px -4px rgba(79, 70, 229, 0.35);
+}
+
+.card-indigo-hover:hover .icon-indigo,
+.card-indigo-hover:active .icon-indigo {
+    background-color: #4f46e5 !important;
+    border-color: #818cf8 !important;
+    color: #ffffff !important;
+}
+
+.card-desc-text {
+    color: var(--text-muted) !important;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* Tipografía auxiliar */
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem !important;
+}
+
+.rounded-2xl {
+    border-radius: 1rem !important;
+}
+
+.rounded-3xl {
+    border-radius: 1.25rem !important;
+}
+
+/* ===================================================
+   Agregados Adicionales (Audifarma & Nuevas Secciones)
+   =================================================== */
+
+/* Tarjeta / Estilos específicos para Audifarma (Esmeralda / Verde / Tecla Verde) */
+.icon-emerald {
+    color: #34d399;
+}
+
+.btn-emerald-glow {
+    background-color: #10b981;
+    color: #ffffff !important;
+    border: none !important;
+    transition: all 0.25s ease;
+}
+
+.btn-emerald-glow:hover {
+    background-color: #059669;
+    box-shadow: 0 0 22px rgba(16, 185, 129, 0.55);
+}
+
+.card-emerald-hover:hover,
+.card-emerald-hover:active {
+    border-color: #10b981 !important;
+    box-shadow: 0 12px 28px -4px rgba(16, 185, 129, 0.35);
+}
+
+.card-emerald-hover:hover .icon-emerald,
+.card-emerald-hover:active .icon-emerald {
+    background-color: #10b981 !important;
+    border-color: #34d399 !important;
+    color: #ffffff !important;
+}
+
+/* Clases auxiliares para componentes extras */
+.bg-slate-900-50 {
+    background-color: rgba(17, 22, 37, 0.5);
+}
+
+.badge-icon-sm {
+    background-color: rgba(139, 92, 246, 0.15);
+    color: #c084fc;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.preview-card-box {
+    background: #0f1422;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.red {
+    background: #ef4444;
+}
+
+.dot.yellow {
+    background: #f59e0b;
+}
+
+.dot.green {
+    background: #10b981;
+}
+
+.bg-dark-inner {
+    background: #161c2e;
+}
+
+.bg-purple-subtle {
+    background: rgba(139, 92, 246, 0.2);
+}
+
+.text-purple {
+    color: #c084fc;
+}
+
+.hover-text-white {
+    transition: color 0.2s ease;
+}
+
+.hover-text-white:hover {
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   ESTILOS PARA LA SECCIÓN DE PREGUNTAS (FAQ)
+   ========================================== */
+
+/* Fondo para los ítems del acordeón */
+.bg-dark-inner {
+    /* Azul muy oscuro semitransparente */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en cada pregunta */
+.bg-dark-inner:hover {
+    border-color: rgba(124, 58, 237, 0.4) !important;
+    /* Borde morado sutil */
+    box-shadow: 0 4px 20px -5px rgba(124, 58, 237, 0.15);
+}
+
+/* Estilo del botón (pregunta) */
+#faqAccordion .accordion-button {
+    box-shadow: none !important;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Quitar fondo blanco por defecto de Bootstrap cuando está abierto */
+#faqAccordion .accordion-button:not(.collapsed) {
+    background-color: rgba(124, 58, 237, 0.08) !important;
+    /* Fondo suave morado cuando está activo */
+    color: #a78bfa !important;
+    /* Texto morado claro */
+}
+
+/* Cambiar el color de la flecha a blanco */
+#faqAccordion .accordion-button::after {
+    filter: invert(1) brightness(2);
+    /* Convierte el icono de Bootstrap a blanco */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Cambiar la flecha a color morado cuando está abierto */
+#faqAccordion .accordion-button:not(.collapsed)::after {
+    filter: invert(53%) sepia(83%) saturate(2856%) hue-rotate(233deg) brightness(101%) contrast(96%);
+}
+
+/* Estilo para el contenido de la respuesta */
+#faqAccordion .accordion-body {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    color: #94a3b8 !important;
+    /* Texto secundario gris claro */
+    line-height: 1.6;
+}
+
+/* Resaltados dentro de la respuesta */
+#faqAccordion .accordion-body strong {
+    color: #f8fafc;
+}
+
+/* Estilos para inputs oscuros estilo MediSoft */
+.bg-slate-900 {
+    background-color: #0f172a !important;
+}
+
+.border-slate-800 {
+    border-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+.input-dark:focus {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+    border-color: #7c3aed !important;
+    box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25) !important;
+}
+
+.btn-outline-slate {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-slate:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.hover-text-white:hover {
+    color: #ffffff !important;
+}
+
+.navbar-medisoft {
+    background: rgba(7, 5, 16, 0.85);
+    /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(12px);
+    /* Efecto de desenfoque elegante */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    /* Borde muy sutil */
+    padding: 1.2rem 2rem;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* ... otros estilos ... */
+}
+
+.hero-title-modern {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.03em;
+}
+
+/* Estilo para las valoraciones de estrellas en especialistas */
+.text-warning {
+    color: #fbbf24 !important;
+}
+
+/* Asegurar el espaciado correcto para los badges internos */
+.badge-medisoft-pill {
+    background-color: rgba(67, 24, 110, 0.6);
+    color: #c084fc;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
